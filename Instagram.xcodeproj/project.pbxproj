@@ -11,12 +11,12 @@
 		4F71B1602A2E11B80031B617 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F71B15F2A2E11B80031B617 /* ContentView.swift */; };
 		4F71B1622A2E11BA0031B617 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F71B1612A2E11BA0031B617 /* Assets.xcassets */; };
 		4F71B1652A2E11BA0031B617 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F71B1642A2E11BA0031B617 /* Preview Assets.xcassets */; };
-		4F71B1712A2EB7190031B617 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F71B1702A2EB7190031B617 /* LoginModel.swift */; };
 		4F71B1732A2EB8070031B617 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F71B1722A2EB8070031B617 /* SignUp.swift */; };
 		4F8400E82A2ECD040022D876 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4F8400E72A2ECD040022D876 /* FirebaseAuth */; };
 		4F8400EA2A2ECD040022D876 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4F8400E92A2ECD040022D876 /* FirebaseStorage */; };
 		4F8400EE2A2EDC640022D876 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8400ED2A2EDC640022D876 /* AuthenticationManager.swift */; };
 		4F8400F02A2EE6970022D876 /* InstaFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8400EF2A2EE6970022D876 /* InstaFirebase.swift */; };
+		4F8400F52A2F2D420022D876 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F8400F42A2F2D420022D876 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,10 +25,10 @@
 		4F71B15F2A2E11B80031B617 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4F71B1612A2E11BA0031B617 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F71B1642A2E11BA0031B617 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		4F71B1702A2EB7190031B617 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		4F71B1722A2EB8070031B617 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		4F8400ED2A2EDC640022D876 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		4F8400EF2A2EE6970022D876 /* InstaFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaFirebase.swift; sourceTree = "<group>"; };
+		4F8400F42A2F2D420022D876 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,13 +63,13 @@
 		4F71B15C2A2E11B80031B617 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
-				4F71B16F2A2EB6BF0031B617 /* Model */,
 				4F71B16C2A2EB6330031B617 /* ViewModel */,
 				4F71B16B2A2EB6240031B617 /* View */,
 				4F71B15D2A2E11B80031B617 /* InstagramApp.swift */,
 				4F71B1612A2E11BA0031B617 /* Assets.xcassets */,
 				4F71B1632A2E11BA0031B617 /* Preview Content */,
 				4F8400EF2A2EE6970022D876 /* InstaFirebase.swift */,
+				4F8400F42A2F2D420022D876 /* GoogleService-Info.plist */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -97,14 +97,6 @@
 				4F8400ED2A2EDC640022D876 /* AuthenticationManager.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		4F71B16F2A2EB6BF0031B617 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				4F71B1702A2EB7190031B617 /* LoginModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F71B1652A2E11BA0031B617 /* Preview Assets.xcassets in Resources */,
+				4F8400F52A2F2D420022D876 /* GoogleService-Info.plist in Resources */,
 				4F71B1622A2E11BA0031B617 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -186,7 +179,6 @@
 			files = (
 				4F8400F02A2EE6970022D876 /* InstaFirebase.swift in Sources */,
 				4F71B1602A2E11B80031B617 /* ContentView.swift in Sources */,
-				4F71B1712A2EB7190031B617 /* LoginModel.swift in Sources */,
 				4F71B15E2A2E11B80031B617 /* InstagramApp.swift in Sources */,
 				4F8400EE2A2EDC640022D876 /* AuthenticationManager.swift in Sources */,
 				4F71B1732A2EB8070031B617 /* SignUp.swift in Sources */,

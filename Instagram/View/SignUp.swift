@@ -15,7 +15,7 @@ struct SignUp: View {
     @State private var isPresented = false
     @State private var text1: String = ""
     @State private var text2: String = ""
-
+    
     var body: some View {
         ZStack {
             
@@ -36,7 +36,7 @@ struct SignUp: View {
                 .padding(.top, 100.0)
                 
                 
-                 ZStack {
+                ZStack {
                     Button ("Log in with Facebook") {
                     }
                     .font(.system(size: 15))
@@ -47,12 +47,12 @@ struct SignUp: View {
                     .background(Color.blue.opacity(0.8))
                     .cornerRadius(8)
                     Image(systemName: "f.square.fill")
-                        
+                    
                         .foregroundColor(Color.white)
                         .padding(.trailing, 190.0)
-
+                    
                 }
-
+                
                 .padding()
                 //
                 
@@ -60,8 +60,7 @@ struct SignUp: View {
                     .foregroundColor(Color.gray)
                 
                 VStack {
-                    TextField("Mobile Number or Email", text: $text1)
-                              //, text:$mobileOrEmail.credentials.fullName)
+                    TextField("Mobile Number or Email", text: $mobileOrEmail)
                         .keyboardType(.emailAddress)
                         .padding()
                         .frame(width: UIScreen.main.bounds.width - 45)
@@ -70,8 +69,7 @@ struct SignUp: View {
                         .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 5)
                         .shadow(color: Color.black.opacity(0.08), radius: 5, x: 0, y: -5)
                     
-                    TextField("Full Name", text: $text1)
-                              //, text:$loginVM.credentials.fullName)
+                    TextField("Full Name", text: $fullName)
                         .keyboardType(.emailAddress)
                         .padding()
                         .frame(width: UIScreen.main.bounds.width - 45)
@@ -80,8 +78,7 @@ struct SignUp: View {
                         .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 5)
                         .shadow(color: Color.black.opacity(0.08), radius: 5, x: 0, y: -5)
                     
-                    TextField("Username", text: $text1)
-                              //, //text:$loginVM.credentials.username)
+                    TextField("Username", text: $username)
                         .keyboardType(.emailAddress)
                         .padding()
                         .frame(width: UIScreen.main.bounds.width - 45)
@@ -91,8 +88,7 @@ struct SignUp: View {
                         .shadow(color: Color.black.opacity(0.08), radius: 5, x: 0, y: -5)
                     
                     
-                    SecureField("Passwort", text: $text2)
-                                //, text: //$loginVM.credentials.password)
+                    SecureField("Passwort", text: $password)
                         .padding()
                         .frame(width: UIScreen.main.bounds.width - 45)
                         .background(Color.gray.opacity(0.1))
@@ -100,8 +96,8 @@ struct SignUp: View {
                         .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 5)
                         .shadow(color: Color.black.opacity(0.08), radius: 5, x: 0, y: -5)
                     
-                    SecureField("Confirm Passwort", text: $text2)
-                                //, text: //$loginVM.credentials.password)
+                    SecureField("Confirm Passwort", text: $password)
+                    //, text: //$loginVM.credentials.password)
                         .padding()
                         .frame(width: UIScreen.main.bounds.width - 45)
                         .background(Color.gray.opacity(0.1))
@@ -111,7 +107,7 @@ struct SignUp: View {
                     
                 }
                 .padding()
-                //
+                
                 Button {
                 } label: {
                     Text("Sign up")
@@ -130,7 +126,6 @@ struct SignUp: View {
                 VStack {
                     
                     Button {
-                        print("Impressum/AGB/NetzDG")
                     } label: {
                         Text("By signing up, you agree to our Terms, Data Policy and Cookies Policy.")
                             .foregroundColor(.black.opacity(0.7))
@@ -139,7 +134,6 @@ struct SignUp: View {
                         
                     }
                     HStack {
-                        
                         Text("Have an account?")
                         Button {
                             isPresented.toggle()

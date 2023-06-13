@@ -53,7 +53,6 @@ struct ContentView: View {
                     VStack(alignment: .leading, spacing: 15) {
                         
                         TextField("Phone number, username or email", text: $viewModel.email)
-                                  //, //text:$loginVM.credentials.email)
                             .keyboardType(.emailAddress)
                             .padding()
                             .frame(width: UIScreen.main.bounds.width - 45)
@@ -64,7 +63,6 @@ struct ContentView: View {
                         
                         
                         SecureField("Passwort", text: $viewModel.password)
-                                    //, text: //$loginVM.credentials.password)
                             .padding()
                             .frame(width: UIScreen.main.bounds.width - 45)
                             .background(Color.gray.opacity(0.1))
@@ -76,25 +74,16 @@ struct ContentView: View {
                     .padding()
                     
                     NavigationLink("Forgot password?", destination: {
-                        //PasswordRecoverView()
                     })
                     
                     
                     .padding(.leading, 190)
                     
-//                    if loginVM.showProgressView {
-//                        ProgressView()
-//                    }
-                    
                     Button("Log In") {
                         viewModel.logIn()
-                   //     self.isPresented.toggle()
                         
                     }
-//                    .fullScreenCover(isPresented: $isPresented) {
-//                       // CustomTabView()
-//                    }
-                    //.disabled(loginVM.loginDisabled)
+
                     .font(.system(size: 20))
                     .foregroundColor(.white)
                     .padding(.vertical)
@@ -102,12 +91,10 @@ struct ContentView: View {
                     .background(Color.blue)
                     .cornerRadius(8)
                     .onTapGesture {
-                       // UIApplication.shared.endEditing()
                     }
                     .autocapitalization(.none)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(/*@START_MENU_TOKEN@*/.top, 10.0/*@END_MENU_TOKEN@*/)
-                   // .disabled(loginVM.showProgressView)
                     
                     HStack {
                         Text("Don't have an account?")
